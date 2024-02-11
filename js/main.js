@@ -163,24 +163,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function toggleTab(activeTab, otherTabs, activeContent, otherContents) {
-    // Activate the clicked tab
-    activeTab.classList.add('active');
-    activeTab.setAttribute('aria-selected', 'true');
-    // Deactivate other tabs
-    otherTabs.forEach(tab => {
-        tab.classList.remove('active');
-        tab.setAttribute('aria-selected', 'false');
-    });
-    // Show the active content
-    activeContent.classList.add('active');
-    activeContent.removeAttribute('aria-hidden');
-    // Hide the other contents
-    otherContents.forEach(content => {
-        content.classList.remove('active');
-        content.setAttribute('aria-hidden', 'true');
-    });
-}
 
 
 //フェードインのアニメーション
@@ -227,6 +209,3 @@ document.addEventListener('DOMContentLoaded', function() {
         path: 'js/lottie.json' 
     });
 });
-
-
-
